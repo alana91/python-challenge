@@ -54,19 +54,19 @@ def find_prime_numbers(number):
         else:
             print(n1)
 
-def is_word_prime(word):
-    alphabet_dict = generate_alphabet_dict()
+def is_word_prime(word, letter_dict):
     letter_list = list(word)
     sum = 0
     for letter in letter_list:
         try:
-            sum = sum + alphabet_dict[letter]
+            sum = sum + letter_dict[letter]
         except KeyError:
             print("That's not a valid word.")
             return
     print(is_prime(sum))
 
 list_ = generate_ordered_list(300)
+alphabet_dict = generate_alphabet_dict()
 
 answer = None
 while answer != "5":
@@ -94,7 +94,7 @@ while answer != "5":
             print("That's not a valid number.")
     elif answer == "4":
         word = input("Choose a word: ")
-        is_word_prime(word)
+        is_word_prime(word, alphabet_dict)
     elif answer == "5":
         print("\n Bye!") 
     else:
