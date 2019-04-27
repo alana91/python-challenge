@@ -21,11 +21,11 @@ def is_prime(number):
     if number > 1:
         for i in range(2, number):
             if (number % i) == 0:
-                return "Not a prime word"
+                return False
         else:
-            return "It's a prime word"
+            return True
     else:
-        return "Not a prime word"
+        return False
 
 def number_search(ordered_list, number):
     low = 0
@@ -63,7 +63,8 @@ def is_word_prime(word, letter_dict):
         except KeyError:
             print("That's not a valid word.")
             return
-    print(is_prime(sum))
+    feedback = {True: "It's a prime word", False: "Not a prime word"}
+    print(feedback.get(is_prime(sum), ""))
 
 list_ = generate_ordered_list(300)
 alphabet_dict = generate_alphabet_dict()
