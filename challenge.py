@@ -71,7 +71,7 @@ list_ = generate_ordered_list(300)
 alphabet_dict = generate_alphabet_dict()
 
 answer = None
-while answer is not "5":
+while answer is not 5:
     print("""
     1. Find out if a number is in a random 300 number ordered list
     2. Compare two random unordered number lists
@@ -80,24 +80,24 @@ while answer is not "5":
     5. Quit
     """)
     answer = input("Please, choose an option: ")
-    if answer is "1":
+    if answer is 1:
         try:
             number = int(input("Choose a number: "))
             number_search(list_, number)
         except ValueError:
             print("That's not a valid number")
-    elif answer is "2":
+    elif answer is 2:
         compare_lists()
-    elif answer is "3":
+    elif answer is 3:
         try:
             number = int(input("Choose a number: "))
             find_prime_numbers(number)
         except ValueError:
             print("That's not a valid number.")
-    elif answer is "4":
+    elif answer is 4:
         word = input("Choose a word: ")
         is_word_prime(word, alphabet_dict)
-    elif answer is "5":
+    elif answer is 5:
         print("\n Bye!") 
     else:
        print("\n Not a valid option. Try again.")
