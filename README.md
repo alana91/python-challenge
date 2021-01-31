@@ -1,3 +1,3 @@
 # python-challenge
 
-My submission to algorithm/performance challenge with python.
+My submission to an algorithm/performance challenge with python.
